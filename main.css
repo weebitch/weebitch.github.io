@@ -13,6 +13,21 @@ h4 {
     padding: 0 40px;
 }
 
+h3 {
+    font-family: "Sour Gummy", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:
+      "wdth" 100;
+    font-size: 23px;
+    color: #fff;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
 button {
     font-family: "Sour Gummy", sans-serif;
     font-optical-sizing: auto;
@@ -56,10 +71,11 @@ button:hover {
 
 .hide-button {
     opacity: 0;
-    -webkit-transition: all 1s;
+    position: absolute;
+    /* -webkit-transition: all 1s;
     -moz-transition: all 1s;
     -o-transition: all 1s;
-    transition: all 1s;
+    transition: all 1s; */
 }
 
 .pulsing {
@@ -69,7 +85,7 @@ button:hover {
 }
 
 .jb {
-    background-image: url('/jb.gif');
+    background-image: url('/wink.webp');
     background-size: cover;
     height: 100%;
     width: 100%;   
