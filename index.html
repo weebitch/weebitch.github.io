@@ -4,13 +4,15 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <html>
 <body>
     <div class="container">
+        <div class="jb hide"></div>
         <h4>Are you being a wee bitch?</h4>
-            <button>YES</button>
-            <button id="move" onmouseover="runaway(this)">NO</button>
+            <button class="yes-tapped">YES</button>
+            <button class="no no-tapped" onmouseover="runaway(this)">NO</button>
     </div>
 
 <script>
@@ -18,6 +20,16 @@
     id.style.top = Math.round(Math.random() * 250) - 100 + 'px';
     id.style.left = Math.round(Math.random() * 250) - 200 + 'px';
 }
+
+$('.yes-tapped').click(function() {
+  $('.jb').toggleClass('hide');
+  $('.move').toggleClass('static');
+});
+
+$('.no-tapped').click(function() {
+  $('.no').toggleClass('hide-button');
+  $('.yes-tapped').toggleClass('pulsing');
+});
 
 'use strict';
 
